@@ -42,18 +42,20 @@ header .container {
 header .container img {
   border: 3px solid white;
   border-radius: 50%;
-  width: 25vh;
+  width: 40vh;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
 }
 header .container h1 {
-  font-size: 5vh;
+  font-size: 2rem;
+  text-shadow: 0 0 7px rgba(0, 0, 0, 0.9);
 }
 
 @media screen and (max-width: 600px) {
   header .container img {
-    width: 25vw;
+    width: 37vw;
   }
   header .container h1 {
-    font-size: 5vw;
+    font-size: 1.3rem;
   }
 }
 nav {
@@ -62,9 +64,9 @@ nav {
   color: antiquewhite;
   position: fixed;
   width: 100%;
-  height: 3em;
+  height: 3rem;
   text-align: center;
-  line-height: 3em;
+  line-height: 3rem;
   align-self: start;
 }
 nav .container {
@@ -158,20 +160,20 @@ nav .container .hamburgerMenu span {
   margin-left: auto;
   text-align: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 4em 0 1.5em;
   flex-wrap: wrap;
 }
 .skill .container h2 {
   width: 100%;
-  padding: 0 0 1em;
+  padding: 0 0 1rem;
 }
 .skill .container .card-skill {
   width: 25%;
-  background-color: antiquewhite;
+  background-color: #f6fbff;
   color: #141414;
   border-radius: 20px;
-  padding: 1em;
+  padding: 1rem;
   margin: 10px;
   box-sizing: border-box;
 }
@@ -181,7 +183,11 @@ nav .container .hamburgerMenu span {
 
 @media screen and (max-width: 600px) {
   .skill .container .card-skill {
-    width: 80%;
+    width: 60%;
+    font-size: 0.8rem;
+  }
+  .skill .container .card-skill img {
+    width: 25%;
   }
 }
 .gallery {
@@ -223,6 +229,38 @@ footer .container {
   margin-right: auto;
   margin-left: auto;
   text-align: center;
-  display: flex;
+  display: grid;
   width: 85%;
+  font-size: 0.7rem;
+}
+footer .container .medsos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.6rem;
+  padding: 0.7rem;
+}
+footer .container .medsos a {
+  color: antiquewhite;
+  text-decoration: none;
+}
+footer .container .medsos a .bi {
+  font-size: 5vh;
+}
+footer .container .medsos a:hover .bi-instagram {
+  color: red;
+}
+footer .container .medsos a:hover .bi-facebook {
+  color: rgb(0, 102, 255);
+}
+
+@media screen and (max-width: 600px) {
+  footer .container {
+    font-size: 0.5;
+  }
+  footer .container .medsos a .bi {
+    font-size: 5vw;
+  }
+  footer .container p {
+    width: 65%;
+  }
 }/*# sourceMappingURL=main.css.map */
