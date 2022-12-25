@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -11,7 +12,7 @@ html {
 body {
   width: 100%;
   display: grid;
-  grid-template-areas: "nav" "header" "about" "skill" "gallery" "footer";
+  grid-template-areas: "nav" "header" "about" "skill" "project" "footer";
   justify-content: center;
   justify-items: center;
   align-content: center;
@@ -27,7 +28,6 @@ header {
   box-sizing: border-box;
 }
 header .container {
-  width: 100%;
   justify-content: center;
   justify-items: center;
   align-content: center;
@@ -70,7 +70,6 @@ nav {
   align-self: start;
 }
 nav .container {
-  width: 100%;
   justify-content: center;
   justify-items: center;
   align-content: center;
@@ -128,7 +127,6 @@ nav .container .hamburgerMenu span {
   width: 100%;
 }
 .about .container {
-  width: 100%;
   justify-content: center;
   justify-items: center;
   align-content: center;
@@ -149,7 +147,6 @@ nav .container .hamburgerMenu span {
   padding: 0 0 1.5rem;
 }
 .skill .container {
-  width: 100%;
   justify-content: center;
   justify-items: center;
   align-content: center;
@@ -161,43 +158,57 @@ nav .container .hamburgerMenu span {
   text-align: center;
   display: flex;
   justify-content: space-evenly;
-  padding: 4em 0 1.5em;
+  padding: 4em 0 1.5rem;
   flex-wrap: wrap;
+  width: 90%;
 }
 .skill .container h2 {
   width: 100%;
   padding: 0 0 1rem;
 }
 .skill .container .card-skill {
-  width: 25%;
+  width: 20%;
   background-color: #f6fbff;
   color: #141414;
   border-radius: 20px;
   padding: 1rem;
   margin: 10px;
-  box-sizing: border-box;
+  font-size: 1.3rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-areas: "img" "title";
+  grid-template-rows: 1fr 0.3fr;
+  gap: 0;
+  place-items: center;
+  place-content: center;
+  height: 300px;
 }
 .skill .container .card-skill img {
-  width: 40%;
+  width: 90%;
+  grid-area: img;
+}
+.skill .container .card-skill h3 {
+  grid-area: title;
 }
 
 @media screen and (max-width: 600px) {
   .skill .container .card-skill {
     width: 60%;
+    height: auto;
     font-size: 0.8rem;
   }
   .skill .container .card-skill img {
-    width: 25%;
+    width: 30%;
   }
 }
-.gallery {
-  grid-area: gallery;
+.project {
+  grid-area: project;
   background-color: #aaddff;
   color: #141e24;
   width: 100%;
+  padding: 0 0 1.5rem;
 }
-.gallery .container {
-  width: 100%;
+.project .container {
   justify-content: center;
   justify-items: center;
   align-content: center;
@@ -207,9 +218,41 @@ nav .container .hamburgerMenu span {
   margin-right: auto;
   margin-left: auto;
   text-align: center;
-  display: grid;
+  display: flex;
+  padding: 4rem 0 1.5rem;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 90%;
+}
+.project .container h2 {
+  width: 100%;
+  padding: 0 0 1rem;
+}
+.project .container .card-project {
+  width: 20%;
+  background-color: #f6fbff;
+  color: #141414;
+  border-radius: 20px;
+  padding: 1rem;
+  margin: 10px;
+  font-size: 1.3rem;
+  overflow: hidden;
+}
+.project .container .card-project img {
+  width: 100%;
 }
 
+@media screen and (max-width: 600px) {
+  .project .container .card-project {
+    display: none;
+    width: 60%;
+    height: auto;
+    font-size: 0.8rem;
+  }
+  .project .container .card-project.primary {
+    display: block;
+  }
+}
 footer {
   grid-area: footer;
   background-color: #141e24;
@@ -219,7 +262,6 @@ footer {
   padding: 0 0 1.5rem;
 }
 footer .container {
-  width: 100%;
   justify-content: center;
   justify-items: center;
   align-content: center;
