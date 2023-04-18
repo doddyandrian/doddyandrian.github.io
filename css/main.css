@@ -120,23 +120,26 @@ nav .container .hamburgerMenu span {
     display: flex;
   }
 }
+
 .about {
   grid-area: about;
+  width: 100vw;
+  text-align: center;
   background-color: #aaddff;
   color: #141e24;
-  width: 100%;
 }
 .about .container {
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-  align-items: center;
+  display: grid;
+  padding: 0.5rem 0;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-  display: grid;
+  margin: auto;
+  width: 85%;
+}
+.about .container p {
+  width: 70%;
+  text-align: justify;
+  justify-self: center;
 }
 
 .skill {
@@ -305,4 +308,4 @@ footer .container .medsos a:hover .bi-facebook {
   footer .container p {
     width: 65%;
   }
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
