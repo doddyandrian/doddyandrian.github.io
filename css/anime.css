@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -302,4 +304,4 @@ section.infoAnime .info ul.linkEpisode li a {
   text-decoration: none;
   color: white;
   text-align: justify;
-}/*# sourceMappingURL=anime.css.map */
+} /*# sourceMappingURL=anime.css.map */
