@@ -7,37 +7,31 @@
 html {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
   width: 100%;
   display: grid;
   grid-template-areas: "nav" "header" "about" "skill" "project" "footer";
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 header {
   grid-area: header;
+  width: 100vw;
   background-color: #316e7d;
   color: aliceblue;
-  width: 100vw;
-  padding: 4.5rem 0 1.5rem;
-  box-sizing: border-box;
+  padding: 8rem 0 4rem;
 }
 header .container {
+  display: grid;
   justify-content: center;
   justify-items: center;
-  align-content: center;
-  align-items: center;
+  width: 85%;
+  margin: auto;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-  display: grid;
 }
 header .container img {
   border: 3px solid white;
@@ -50,38 +44,25 @@ header .container h1 {
   text-shadow: 0 0 7px rgba(0, 0, 0, 0.9);
 }
 
-@media screen and (max-width: 600px) {
-  header .container img {
-    width: 37vw;
-  }
-  header .container h1 {
-    font-size: 1.3rem;
-  }
-}
 nav {
   grid-area: nav;
+  width: 100vw;
   background-color: #141e24;
   color: antiquewhite;
+  place-self: start;
   position: fixed;
-  width: 100%;
   height: 3rem;
-  text-align: center;
   line-height: 3rem;
-  align-self: start;
 }
 nav .container {
-  justify-content: center;
+  display: flex;
+  justify-content: space-between;
   justify-items: center;
-  align-content: center;
   align-items: center;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-  display: flex;
+  margin: auto;
   width: 85%;
-  justify-content: space-between;
 }
 nav .container h3 {
   text-align: left;
@@ -112,15 +93,6 @@ nav .container .hamburgerMenu span {
   border-radius: 3px;
 }
 
-@media screen and (max-width: 600px) {
-  nav .container ul {
-    display: none;
-  }
-  nav .container .hamburgerMenu {
-    display: flex;
-  }
-}
-
 .about {
   grid-area: about;
   width: 100vw;
@@ -130,7 +102,7 @@ nav .container .hamburgerMenu span {
 }
 .about .container {
   display: grid;
-  padding: 0.5rem 0;
+  padding: 2rem 0 4rem;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin: auto;
@@ -144,25 +116,20 @@ nav .container .hamburgerMenu span {
 
 .skill {
   grid-area: skill;
+  display: flex;
   background-color: #316e7d;
   color: aliceblue;
-  width: 100%;
-  padding: 0 0 1.5rem;
+  width: 100vw;
+  height: 100vh;
 }
 .skill .container {
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-  align-items: center;
+  display: flex;
+  padding: 0;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-  display: flex;
-  justify-content: space-evenly;
-  padding: 4em 0 1.5rem;
-  flex-wrap: wrap;
+  margin: auto;
   width: 90%;
 }
 .skill .container h2 {
@@ -194,35 +161,20 @@ nav .container .hamburgerMenu span {
   grid-area: title;
 }
 
-@media screen and (max-width: 600px) {
-  .skill .container .card-skill {
-    width: 60%;
-    height: auto;
-    font-size: 0.8rem;
-  }
-  .skill .container .card-skill img {
-    width: 30%;
-  }
-}
 .project {
   grid-area: project;
+  display: flex;
+  width: 100vw;
+  height: 65vh;
   background-color: #aaddff;
   color: #141e24;
-  width: 100%;
-  padding: 0 0 1.5rem;
 }
 .project .container {
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-  align-items: center;
+  display: flex;
+  padding: 5rem 0 0;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-  display: flex;
-  padding: 4rem 0 1.5rem;
+  margin: auto;
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 90%;
@@ -230,6 +182,28 @@ nav .container .hamburgerMenu span {
 .project .container h2 {
   width: 100%;
   padding: 0 0 1rem;
+}
+.project .container h2 a:link,
+.project .container h2 a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+.project .container h2 a:hover,
+.project .container h2 :active {
+  color: inherit;
+  opacity: 0.5;
+}
+.project .container .more {
+  width: 100%;
+  text-align: right;
+}
+.project .container .more a {
+  background-color: #141e24;
+  text-decoration: none;
+  border: 2px solid #141e24;
+  border-radius: 10px;
+  padding: 0.1rem 0.5rem;
+  color: #aaddff;
 }
 .project .container .card-project {
   width: 20%;
@@ -244,43 +218,31 @@ nav .container .hamburgerMenu span {
 .project .container .card-project img {
   width: 100%;
 }
-
-@media screen and (max-width: 600px) {
-  .project .container .card-project {
-    display: none;
-    width: 60%;
-    height: auto;
-    font-size: 0.8rem;
-  }
-  .project .container .card-project.primary {
-    display: block;
-  }
+.project .container .tombol {
+  display: none;
 }
+
 footer {
   grid-area: footer;
   background-color: #141e24;
   color: antiquewhite;
-  width: 100%;
+  width: 100vw;
   text-align: center;
-  padding: 0 0 1.5rem;
 }
 footer .container {
+  display: grid;
   justify-content: center;
   justify-items: center;
-  align-content: center;
-  align-items: center;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-  display: grid;
+  margin: auto;
+  padding: 1.5rem 0;
   width: 85%;
   font-size: 0.7rem;
 }
 footer .container .medsos {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 0.6rem;
   padding: 0.7rem;
 }
@@ -292,15 +254,88 @@ footer .container .medsos a .bi {
   font-size: 5vh;
 }
 footer .container .medsos a:hover .bi-instagram {
-  color: red;
+  background-image: linear-gradient(to top right, #ffdc80, #fcaf45, #f77737, #f56040, #fd1d1d, #e1306c, #c13584, #833ab4);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 footer .container .medsos a:hover .bi-facebook {
-  color: rgb(0, 102, 255);
+  color: #206aff;
+}
+footer .container .medsos a:hover .bi-whatsapp {
+  color: #25d366;
+}
+footer .container .medsos a:hover .bi-twitter {
+  color: #1da1f2;
+}
+footer .container .medsos a:hover .bi-telegram {
+  color: #0088cc;
+}
+footer .container .medsos a:hover .bi-line {
+  color: #06c755;
 }
 
 @media screen and (max-width: 600px) {
-  footer .container {
-    font-size: 0.5;
+  * {
+    font-size: 0.8rem;
+  }
+  h2,
+  h3 {
+    font-size: 1.1rem;
+  }
+  header {
+    padding: 5rem 0 0;
+  }
+  header .container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  header .container img {
+    margin: auto;
+    width: 25vw;
+  }
+  header .container h1 {
+    margin: auto;
+    font-size: 170%;
+  }
+  nav .container ul {
+    display: none;
+  }
+  nav .container .hamburgerMenu {
+    display: flex;
+  }
+  .about .container {
+    width: 90%;
+  }
+  .about .container p {
+    width: 100%;
+  }
+  .skill {
+    height: 100vw;
+  }
+  .skill .container .card-skill {
+    width: 60%;
+    height: auto;
+    font-size: 0.8rem;
+  }
+  .skill .container .card-skill img {
+    width: 30%;
+  }
+  .project {
+    height: 100vw;
+  }
+  .project .container {
+    padding: 0;
+  }
+  .project .container .more {
+    display: none;
+  }
+  .project .container .card-project {
+    display: none;
+    width: 70%;
+  }
+  .project .container .primary {
+    display: block;
   }
   footer .container .medsos a .bi {
     font-size: 5vw;
@@ -308,4 +343,4 @@ footer .container .medsos a:hover .bi-facebook {
   footer .container p {
     width: 65%;
   }
-} /*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
