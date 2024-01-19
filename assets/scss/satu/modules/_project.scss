@@ -1,0 +1,67 @@
+@use "mixin";
+
+.project {
+  grid-area: project;
+  @include mixin.background(terang);
+  width: 100%;
+
+  .container {
+    @include mixin.container(flex);
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 90%;
+
+    h2 {
+      width: 100%;
+      padding: 0 0 1rem;
+    }
+
+    .more {
+      width: 100%;
+      text-align: right;
+      a {
+        background-color: #141e24;
+        text-decoration: none;
+        border: 2px solid #141e24;
+        border-radius: 10px;
+        padding: 0.1rem 0.5rem;
+        color: #aaddff;
+      }
+    }
+
+    .card-project {
+      @include mixin.card(project);
+    }
+
+    .tombol {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .project {
+    .container {
+      h2,
+      .more,
+      .card-project {
+        display: none;
+      }
+
+      .tombol {
+        display: inline-block;
+        h2 {
+          display: inline-block;
+          a {
+            background-color: #141e24;
+            text-decoration: none;
+            border: 0.1rem solid #141e24;
+            border-radius: 5rem;
+            padding: 0.5rem 1rem;
+            color: #aaddff;
+          }
+        }
+      }
+    }
+  }
+}

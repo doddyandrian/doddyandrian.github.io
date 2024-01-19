@@ -1,0 +1,12 @@
+@use "mixin";
+
+.about {
+  grid-area: about;
+
+  @include mixin.background(terang);
+  width: 100%;
+
+  .container {
+    @include mixin.container(grid);
+  }
+}

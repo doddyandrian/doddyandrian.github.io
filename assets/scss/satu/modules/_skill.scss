@@ -1,0 +1,39 @@
+@use "mixin";
+
+.skill {
+  grid-area: skill;
+  @include mixin.background(gelap);
+  width: 100%;
+
+  .container {
+    @include mixin.container(flex);
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 90%;
+
+    h2 {
+      width: 100%;
+      padding: 0 0 1rem;
+    }
+
+    .card-skill {
+      @include mixin.card(skill);
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .skill {
+    .container {
+      .card-skill {
+        width: 60%;
+        height: auto;
+        font-size: 0.8rem;
+
+        img {
+          width: 30%;
+        }
+      }
+    }
+  }
+}

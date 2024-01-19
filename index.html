@@ -9,119 +9,220 @@
     <!-- Icon Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
 
+    <!-- RemixIcon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Unicons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+
     <!-- Font Googke -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="css/main.css" />
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body>
-    <!-- Header -->
-    <header>
-      <div class="container">
-        <img src="img/profil/doddy.jpg" alt="Doddy Andrian" />
-        <h1>Doddy Andrian</h1>
-      </div>
+    <!-- HEADER -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav_logo">Doddy Andrian</a>
+
+        <div class="nav_menu" id="nav-menu">
+          <ul class="nav_list grid">
+            <li class="nav_item">
+              <a href="#home" class="nav_link active-link"><i class="uil uil-estate nav_icon"></i>Home</a>
+            </li>
+            <li class="nav_item">
+              <a href="#about" class="nav_link"><i class="uil uil-user nav_icon"></i>About</a>
+            </li>
+            <li class="nav_item">
+              <a href="#skill" class="nav_link"><i class="uil uil-file-alt nav_icon"></i>Skills</a>
+            </li>
+            <li class="nav_item">
+              <a href="#project" class="nav_link"><i class="uil uil-briefcase-alt nav_icon"></i>Project</a>
+            </li>
+            <!-- <li class="nav_item">
+              <a href="#portfolio" class="nav_link"><i class="uil uil-scenery nav_icon"></i>Portfolio</a>
+            </li>
+            <li class="nav_item">
+              <a href="#contact" class="nav_link"><i class="uil uil-message nav_icon"></i>Contactme</a>
+            </li> -->
+          </ul>
+          <i class="uil uil-times nav_close" id="nav-close"></i>
+        </div>
+
+        <div class="nav_btns">
+          <div class="nav_toggle" id="nav-toggle">
+            <i class="uil uil-bars"></i>
+          </div>
+        </div>
+      </nav>
     </header>
-    <!-- Akhir Header -->
+    <!-- AKHIR HEADER -->
 
-    <!-- Navigation -->
-    <nav class="nav">
-      <div class="container">
-        <div class="logo">
-          <h3>Doddy Andrian</h3>
+    <!-- MAIN -->
+    <main class="main">
+      <!-- HOME -->
+      <section class="home section" id="home">
+        <div class="home_container container grid">
+          <img src="assets/img/profil/doddy.jpg" alt="Doddy Andrian" class="home_image" />
+          <div class="home_data">
+            <h1 class="home_title">Doddy Andrian</h1>
+            <h3 class="home_subtitle">Frontend developer</h3>
+          </div>
         </div>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">Home</a></li>
-          <li><a href="#skill">Home</a></li>
-          <li><a href="html/bokunime/bokunime.html">Home</a></li>
-        </ul>
-        <div class="hamburgerMenu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </nav>
-    <!-- Akhir Navigation -->
+      </section>
+      <!-- AKHIR HOME -->
 
-    <!-- About -->
-    <section class="about" id="about">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 50 1440 150">
+      <!-- Gelombang -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 90 1440 100">
         <path
-          fill="#316e7d"
+          fill="#04364A"
           fill-opacity="1"
           d="M0,128L60,144C120,160,240,192,360,176C480,160,600,96,720,90.7C840,85,960,139,1080,149.3C1200,160,1320,128,1380,112L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
           data-darkreader-inline-fill=""
           style="--darkreader-inline-fill: #275864"
         ></path>
       </svg>
-      <div class="container">
-        <h2>Hallo</h2>
-        <p>
-          Saya adalah seorang Frontend Web Developer dan Graphic Design selama kurang lebih 1 tahun. Seorang yang teliti dan terampil menggunakan HTML, CSS, dan JavaScript. Menguasai beragam software seperti CorelDRAW dan Adobe Photoshop.
-          Berpengalaman dalam pembuatan logo, poster, dan visual untuk kebutuhan pemasaran.
-        </p>
-      </div>
-    </section>
-    <!-- Akhir About -->
+      <!-- Akhir Gelombang -->
 
-    <!-- Skill -->
-    <section class="skill" id="skill">
-      <div class="container">
-        <h2>My Skill</h2>
-        <div class="web card-skill">
-          <img src="img/icon/coding.png" alt="coding" />
-          <h3>Frontend Web Development</h3>
+      <!-- ABOUT -->
+      <section class="about section" id="about">
+        <h3 class="section_title">About Me</h3>
+        <div class="about_container container grid">
+          <p class="about_paragraf">
+            Saya adalah seorang Frontend Web Developer dan Graphic Design selama kurang lebih 1 tahun. Seorang yang teliti dan terampil menggunakan HTML, CSS, dan JavaScript. Menguasai beragam software seperti CorelDRAW dan Adobe Photoshop.
+            Berpengalaman dalam pembuatan logo, poster, dan visual untuk kebutuhan pemasaran.
+          </p>
         </div>
-        <div class="design card-skill">
-          <img src="img/icon/vector.png" alt="vector7" />
-          <h3>Design Graphic</h3>
-        </div>
-      </div>
-    </section>
-    <!-- Akhir Skill -->
+      </section>
+      <!-- AKHIR ABOUT -->
 
-    <!-- My Project -->
-    <section class="project" id="project">
-      <div class="container">
-        <h2>My Project</h2>
-        <div class="more">
-          <a href="html/project.html">more</a>
+      <!-- SKILL -->
+      <section class="skill section" id="skill">
+        <h3 class="section_title">My Skill</h3>
+        <div class="skill_container container">
+          <div class="skill_card grid">
+            <div class="web item_skill_card grid">
+              <img src="assets/img/icon/coding.png" alt="coding" class="skill_card_image" />
+              <h4 class="skill_card_title">Frontend Web Development</h4>
+            </div>
+            <div class="design item_skill_card grid">
+              <img src="assets/img/icon/vector.png" alt="vector7" class="skill_card_image" />
+              <h4 class="skill_card_title">Design Graphic</h4>
+            </div>
+          </div>
         </div>
-        <div class="card-project primary">
-          <img src="img/project/pinForba.png" alt="Pin Forba" />
-        </div>
-        <div class="card-project">
-          <img src="img/project/logoBPH.png" alt="Logo BPH" />
-        </div>
-      </div>
-    </section>
-    <!-- Akhir My Projecr -->
+      </section>
+      <!-- AKHIR SKILL -->
 
-    <!-- Footer -->
+      <!-- MY PROJECT -->
+      <section class="project section" id="project">
+        <h2 class="section_title">My Project</h2>
+        <div class="project_container container swiper-container">
+          <div class="swiper-wrapper">
+            <!-- Project 1 -->
+            <div class="project_content grid swiper-slide">
+              <img src="assets/img/project/logoBPH.png" alt="Logo BPH" class="project_img" />
+              <!-- <div class="portfolio_data">
+                <h3 class="portfolio_title">Modern Website</h3>
+                <p class="portfolio_description">Website adaptable to all devices, with ui components and animated interactions.</p>
+                <a href="#" class="button button-flex button-small portfolio_button">
+                  Demo
+                  <i class="uil uil-arrow-right button_icon"></i>
+                </a>
+              </div> -->
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project_content grid swiper-slide">
+              <img src="assets/img/project/pinForba.png" alt="Pin Forba" class="project_img" />
+              <!-- <div class="portfolio_data">
+                <h3 class="portfolio_title">Modern Website</h3>
+                <p class="portfolio_description">Website adaptable to all devices, with ui components and animated interactions.</p>
+                <a href="#" class="button button-flex button-small portfolio_button">
+                  Demo
+                  <i class="uil uil-arrow-right button_icon"></i>
+                </a>
+              </div> -->
+            </div>
+          </div>
+
+          <!-- Add Arrows -->
+          <div class="swiper-button-next">
+            <i class="uil uil-angle-right-b swiper-project-icon"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="uil uil-angle-left-b swiper-project-icon"></i>
+          </div>
+
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+
+          <a href="#" class="button button-flex button-small project_button">
+            More
+            <i class="uil uil-arrow-right button_icon"></i>
+          </a>
+        </div>
+      </section>
+      <!-- AKHIR MY PROJECT -->
+    </main>
+    <!-- AKHIR MAIN -->
+
+    <!-- FOOTER -->
     <footer class="footer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 100 1440 180">
         <path
-          fill="#aaddff"
+          fill="hsl(197, 40%, 42%)"
           fill-opacity="1"
           d="M0,128L60,154.7C120,181,240,235,360,240C480,245,600,203,720,202.7C840,203,960,245,1080,240C1200,235,1320,181,1380,154.7L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C128,0,154,0,60,0L0,0Z"
           style="--darkreader-inline-fill: #303436"
           data-darkreader-inline-fill=""
         ></path>
       </svg>
-      <div class="container">
-        <div class="medsos">
-          <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/doddyaas/" target="_blank"><i class="bi bi-instagram"></i></a>
-          <a href="" target="_blank"><i class="bi bi-line"></i></a>
-          <a href="https://t.me/doddyandrian" target="_blank"><i class="bi bi-telegram"></i></a>
-          <a href="https://twitter.com/doddyaas" target="_blank"><i class="bi bi-twitter"></i></a>
-          <a href="https://wa.me/6285728403680" target="_blank"><i class="bi bi-whatsapp"></i></a>
+
+      <div class="footer_bg">
+        <div class="footer_container container grid">
+          <div>
+            <h1 class="footer_title">Doddy Andrian</h1>
+            <span class="footer_subtitle">Frontend developer</span>
+          </div>
+          <div class="footer_medsos">
+            <a href="" target="_blank" class="footer_medsos">
+              <i class="uil uil-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/doddyaas/" target="_blank" class="footer_medsos"> <i class="uil uil-instagram"></i></a>
+            <a href="" target="_blank" class="footer_medsos">
+              <i class="uil uil-line"></i>
+            </a>
+            <a href="https://t.me/doddyandrian" target="_blank" class="footer_medsos">
+              <i class="uil uil-telegram"></i>
+            </a>
+            <a href="https://twitter.com/doddyaas" target="_blank" class="footer_medsos">
+              <i class="uil uil-twitter"></i>
+            </a>
+            <a href="https://wa.me/6285728403680" target="_blank" class="footer_medsos">
+              <i class="uil uil-whatsapp"></i>
+            </a>
+          </div>
         </div>
-        <p>Copyright &copy 2022 DoddyAndrian. All Right Reserved</p>
+        <p class="footer_copy">Copyright &copy 2022 Doddy Andrian. All Right Reserved</p>
       </div>
     </footer>
-    <!-- Footer -->
+    <!-- AKHIR FOOTER -->
+
+    <!-- SCROLL TOP -->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="uil uil-arrow-up scrollup_icon"></i>
+    </a>
+
+    <!-- SWIPER JS -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!-- MAIN JS -->
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

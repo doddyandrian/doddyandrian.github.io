@@ -1,0 +1,58 @@
+@use "mixin";
+
+footer {
+  grid-area: footer;
+  @include mixin.background(footer);
+  width: 100%;
+  text-align: center;
+  padding: 0 0;
+
+  .container {
+    @include mixin.container(grid);
+    width: 85%;
+    font-size: 0.7rem;
+
+    .medsos {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.6rem;
+      padding: 0.7rem;
+
+      a {
+        color: antiquewhite;
+        text-decoration: none;
+
+        .bi {
+          font-size: 5vh;
+        }
+      }
+
+      a:hover {
+        .bi-instagram {
+          color: red;
+        }
+        .bi-facebook {
+          color: rgb(0, 102, 255);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    .container {
+      font-size: 0.5;
+      .medsos {
+        a {
+          .bi {
+            font-size: 5vw;
+          }
+        }
+      }
+      p {
+        width: 65%;
+      }
+    }
+  }
+}

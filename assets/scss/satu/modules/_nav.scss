@@ -1,0 +1,54 @@
+@use "mixin";
+
+nav {
+  grid-area: nav;
+  @include mixin.background(nav);
+
+  .container {
+    @include mixin.container(nav);
+
+    h3 {
+      text-align: left;
+    }
+
+    ul {
+      display: flex;
+      list-style-type: none;
+      width: 40%;
+      li {
+        flex: auto;
+        a {
+          color: antiquewhite;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .hamburgerMenu {
+      display: none;
+      flex-direction: column;
+      height: 21px;
+      justify-content: space-between;
+      span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background-color: antiquewhite;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    .container {
+      ul {
+        display: none;
+      }
+      .hamburgerMenu {
+        display: flex;
+      }
+    }
+  }
+}
